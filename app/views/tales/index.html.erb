@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tales</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tales.each do |tale| %>
+      <tr>
+        <td><%= tale.title %></td>
+        <td><%= link_to 'Show', tale %></td>
+        <td><%= link_to 'Edit', edit_tale_path(tale) %></td>
+        <td><%= link_to 'Destroy', tale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tale', new_tale_path %>
