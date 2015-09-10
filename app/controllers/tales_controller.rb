@@ -7,6 +7,9 @@ class TalesController < ApplicationController
     @tales = Tale.all
   end
 
+  def sabi
+  end
+
   # GET /tales/1
   # GET /tales/1.json
   def show
